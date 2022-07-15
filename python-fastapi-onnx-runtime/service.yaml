@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-fastapi-onnx-runtime
+spec:
+  type: LoadBalancer
+  selector:
+    name: python-fastapi-onnx-runtime
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

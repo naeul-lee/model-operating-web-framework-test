@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-fastapi-onnx-runtime
+  labels:
+    name: python-fastapi-onnx-runtime
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: python-fastapi-onnx-runtime
+  template:
+    metadata:
+      name: python-fastapi-onnx-runtime
+      labels:
+        name: python-fastapi-onnx-runtime
+    spec:
+      containers:
+        - name: python-fastapi-onnx-runtime
+          image: 423062414102.dkr.ecr.ap-northeast-2.amazonaws.com/python-fastapi-onnx-runtime:0.0.1
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 256Mi
+            limits:
+              memory: 512Mi
