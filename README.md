@@ -4,6 +4,10 @@
 $ cd python-fastapi
 
 $ uvicorn app.api:app --port 8000
+
+또는 
+
+$ uvicorn app.main:app --port 8000
 ```
 
 ## 2. 도커 이미지 빌드 및 실행
